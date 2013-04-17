@@ -9,9 +9,28 @@
     <script type="application/javascript" src="index.js"></script>
   </head>
   <body>
-    <h1>Semantic</h1>
+    <h1>Семантика</h1>
+    <h4><center><i>Сема́нтика (от др.-греч. σημαντικός — обозначающий) — раздел языкознания, изучающий значение единиц языка. (Из <a href="https://ru.wikipedia.org/wiki/Семантика">Википедии</a>)</i></center></h4>
     <section>
-      ...
+      Базовой структурой является сборка, она включает в себя набор элементов сборки<br/>
+      на Nemerle описание её ячейки AST выглядит так:<br/>
+      <i id="Assembly">
+        symbol module Assembly<br/>
+        {<br/>
+          &emsp;Items: list[AssemblyItem] {get; set;}<br/>
+        }<br/>
+      </i>
+      <i id="AssemblyItem">
+        abstract symbol module AssembolyItem { }<br/>
+      </i>
+      <br/>
+      Следующим элементом является функция - рабочая лошадка программы:<br/>
+      <i>
+        symbol module Function: AssemblyItem<br/>
+        {<br/>
+          &emsp;...<br/>
+        }<br/>
+      </i>
     </section>
   </body>
 </html>
